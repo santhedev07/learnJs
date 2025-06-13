@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial JavaScript</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <div class="container mx-auto p-4 justify-center items-center text-center">
+        <h2 class="font-bold text-4xl">DOM JavaScript</h2>
+        <p id="demo" class="font-mono mb-4">yyyy/mm/dd</p>
+        <button clas="bg-slate-500 hover:bg-slate-700 border border-black" type="button" onclick="showDate()">Display Date</button>
+    </div>
+</body>
+
+</html>
+<script>
+    function showDate() {
+        document.getElementById("demo").innerHTML = Date();
+    }
+</script>
