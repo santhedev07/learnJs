@@ -1,5 +1,5 @@
 // Replace 'YOUR_API_KEY' with your OpenWeatherMap API key
-const apiKey = 'xxxxxxx';
+const apiKey = '30c84f42d81774272dd1476019a431c7';
 const city = 'Jakarta'; // Replace with your desired city
 const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
