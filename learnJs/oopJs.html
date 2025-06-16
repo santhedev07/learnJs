@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP Js</title>
+</head>
+
+<body>
+    <h1>Object Oriented Programming in JavaScript</h1>
+    <script>
+        // Object Literal
+        function studentObject(name, age, className) {
+            let student = Object.create(constructorObject);
+            student.name = name;
+            student.age = age;
+            student.className = className;
+            return student;
+        }
+
+        let constructorObject = {
+            studentInfo: function () {
+                return `Nama: ${this.name}, Umur: ${this.age}, Kelas: ${this.className}`;
+            },
+        }
+
+        let student1 = studentObject("Joko", 17, "11A");
+        console.log(student1); // Nama: Joko, Umur: 17, Kelas: 11A
+        // Class Syntax
+        class Student{
+            constructor(fullName, major, age) {
+                this.fullName = fullName;
+                this.major = major;
+                this.age = age;
+            }
+            sing(){
+                return `${this.fullName} is singing`;
+            }
+            study() {
+                return `${this.fullName} is studying ${this.major}`;
+            }
+        }
+
+        class majorStudent extends Student {
+            constructor(fullName, major, age, gpa) {
+                super(fullName, major, age);
+                this.gpa = gpa;
+            }
+            getGPA() {
+                return `${this.fullName} has a GPA of ${this.gpa}`;
+            }
+        }
+
+        let studentSchool = new majorStudent("Evan Rudianysah", "Computer Science", 20, 3.8);
+        console.log(studentSchool.study());
+        console.log(studentSchool);
+    </script>
+</body>
+
+</html>
